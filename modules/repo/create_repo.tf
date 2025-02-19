@@ -1,7 +1,7 @@
 # Create a new repository
 resource "github_repository" "terraform" {
   name        = "terraform-laboratory"
-  description = "Repository created and managed by Terraform, for Arquitics"
+  description = "Created by Terraform, for Arquitics 2024 II"
   
   # Set repository visibility
   visibility = "public"
@@ -15,10 +15,14 @@ resource "github_repository" "terraform" {
   allow_squash_merge = true
   allow_rebase_merge = true
   
-  # Configure template, I'm using AWS terraform template
+  # Configure template, https://github.com/brrodriguezd/proyecto26.github.io
   template {
-    owner      = "aws-ia"
-    repository = "terraform-repo-template"
+    owner      = "brrodriguezd"
+    repository = "proyecto26.github.io"
+  }
+
+  pages{
+    build_type = "workflow"
   }
 }
 
@@ -46,4 +50,5 @@ resource "github_branch_protection" "main" {
   # Require linear history
   required_linear_history = true
 }
+
 
