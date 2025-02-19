@@ -8,7 +8,7 @@ resource "github_branch" "anacletoeldino" {
   branch = "ancletoeldinosaurio"
 }
 
-resource "github_branch" "nota maxima para mi si lee esto profe" {
+resource "github_branch" "nota_maxima_para_mi_si_lee_esto_profe" {
   repository = "terraform-laboratory"
   branch = "uwu"
 }
